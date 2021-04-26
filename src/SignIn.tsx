@@ -87,7 +87,7 @@ export default function SignIn() {
           <Grid container>
             <Grid item>
               <Link  href="/signUp"  variant="body2" >
-              {"Don't have an account? Sign Up"}
+              "Don't have an account? Sign Up"
               </Link>
             </Grid>
           </Grid>
@@ -99,10 +99,3 @@ export default function SignIn() {
   );
 }
 
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}

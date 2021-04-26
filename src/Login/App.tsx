@@ -10,11 +10,7 @@ import SignIn from "../SignIn";
 import SignUp from "../SignUp";
 import HomePage from "../HomePage";
 import CommentPage from "../CommentPage";
-import User from "../User";
-
-
-
-
+import User from "../FirstTable/User";
 
 export default function BasicExample() {
   return (
@@ -58,6 +54,7 @@ export default function BasicExample() {
           <Route path="/user">
             <User />
           </Route>
+         
         </Switch>
       </div>
       </div>
@@ -65,9 +62,7 @@ export default function BasicExample() {
   );
 }
 
-
-
-  function useStyles() {
+     function useStyles() {
     throw new Error("Function not implemented.");
   }
 
