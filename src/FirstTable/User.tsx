@@ -1,31 +1,32 @@
-import React from 'react'
+import React from "react";
+import MaUTable from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
 
-import CssBaseline from '@material-ui/core/CssBaseline'
-import MaUTable from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
-import TableCell from '@material-ui/core/TableCell'
-import TableHead from '@material-ui/core/TableHead'
-import TableRow from '@material-ui/core/TableRow'
+import { useTable } from "react-table";
 
-import { useTable } from 'react-table'
+import { ExtendedTableColumnOptions } from "../types/table";
+interface Props {
+  columns: ExtendedTableColumnOptions[];
+  data: any[];
+}
 
-import makeData from './makeData'
-
-function Table({columns:[], data:[]}) {
-  
+const Table: React.FC<Props> = ({ columns, data }) => {
   const { getTableProps, headerGroups, rows, prepareRow } = useTable({
-    columns:[],
-    data:[],
-  })
-  
+    columns,
+    data,
+  });
+
   return (
     <MaUTable {...getTableProps()}>
       <TableHead>
-        {headerGroups.map(headerGroup => (
+        {headerGroups.map((headerGroup) => (
           <TableRow {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map(column => (
+            {headerGroup.headers.map((column) => (
               <TableCell {...column.getHeaderProps()}>
-                {column.render('Header')}
+                {column.render("Header")}
               </TableCell>
             ))}
           </TableRow>
@@ -33,75 +34,48 @@ function Table({columns:[], data:[]}) {
       </TableHead>
       <TableBody>
         {rows.map((row) => {
-          prepareRow(row)
+          prepareRow(row);
           return (
             <TableRow {...row.getRowProps()}>
-              {row.cells.map(cell => {
+              {row.cells.map((cell) => {
                 return (
                   <TableCell {...cell.getCellProps()}>
-                    {cell.render('Cell')}
+                    {cell.render("Cell")}
                   </TableCell>
-                )
+                );
               })}
             </TableRow>
-          )
+          );
         })}
       </TableBody>
     </MaUTable>
-  )
+  );
+};
+
+const columns: ExtendedTableColumnOptions[] = [
+  {
+    Header: "First Name",
+    accessor: "firstName",
+  },
+  { Header: "Last Name", accessor: "lastName" },
+  {
+    Header: "Age",
+    accessor: "age",
+  },
+  {
+    Header: "Visits",
+    accessor: "visits",
+  },
+  {
+    Header: "Profile Progress",
+    accessor: "progress",
+  },
+];
+
+function User() {
+  const data: any[] = [];
+
+  return <Table columns={columns} data={data} />;
 }
 
-function App() {
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: 'Name',
-        accessor: 'firstName',
-        columns: [
-          {
-            Header: 'First Name',
-            accessor: 'firstName',
-          },
-          {
-            Header: 'Last Name',
-            accessor: 'lastName',
-          },
-        ],
-      },
-      {
-        Header: 'Info',
-        columns: [
-          {
-            Header: 'Age',
-            accessor: 'age',
-          },
-          {
-            Header: 'Visits',
-            accessor: 'visits',
-          },
-          {
-            Header: 'Status',
-            accessor: 'status',
-          },
-          {
-            Header: 'Profile Progress',
-            accessor: 'progress',
-          },
-        ],
-      },
-    ],
-    []
-  )
-
-  const data = React.useMemo(() => makeData(), [])
-
-  return (
-    <div className="App">
-    <Table columns={columns} data={[]} />
-  </div>
-  )
-}
-
-export default App
-
-
+export default User;
