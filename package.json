@@ -16,12 +16,14 @@
     "clsx": "^1.1.1",
     "formik": "^2.2.6",
     "namor": "^2.0.2",
+    "ol": "^6.5.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-commentbox": "^3.0.1",
     "react-data-table-component": "^6.11.7",
     "react-dom": "^17.0.1",
     "react-image": "^4.0.3",
+    "react-render": "^4.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-table": "^7.6.3",
@@ -55,7 +57,9 @@
     ]
   },
   "devDependencies": {
+    "@types/ol": "^6.4.2",
     "@types/react-router-dom": "^5.1.7",
-    "@types/react-table": "^7.0.29"
+    "@types/react-table": "^7.0.29",
+    "prettier": "2.2.1"
   }
 }

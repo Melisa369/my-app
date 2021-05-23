@@ -10,7 +10,11 @@ import SignIn from "../SignIn";
 import SignUp from "../SignUp";
 import HomePage from "../HomePage";
 import CommentPage from "../CommentPage";
-import User from "../FirstTable/User";
+import CommentTable from "../FirstTable/CommentTable";
+import UserTable from "../SecondTable/UserTable";
+import AddressCard from "../AddressCard";
+
+
 
 export default function BasicExample() {
   return (
@@ -28,11 +32,22 @@ export default function BasicExample() {
             <Link to="/signUp">Sign Up</Link>
           </li>
           <li>
+            <Link to="/addressCard">Address</Link>
+          </li>
+          <li>
             <Link to="/commentPage">Comments</Link>
           </li>
           <li>
-              <Link to="/user">User</Link>
+              <Link to="/commentTable">Comment Table</Link>
             </li>
+            <li>
+              <Link to="/userTable">User Table</Link>
+            </li>
+            <li>
+              <Link to="/mapAddress">Map</Link>
+            </li>
+          
+           
         </ul>
 
         <hr />
@@ -48,13 +63,21 @@ export default function BasicExample() {
           <Route path="/signUp">
             <SignUp />
           </Route>
+          <Route path="/addressCard">
+            <AddressCard />
+          </Route>
           <Route path="/commentPage">
             <CommentPage />
           </Route>
-          <Route path="/user">
-            <User />
+          <Route path="/commentTable">
+            <CommentTable />
           </Route>
-         
+          <Route path="/userTable">
+            <UserTable />
+          </Route>
+          <Route path="/mapAddress">
+            <MapAddress />
+          </Route>
         </Switch>
       </div>
       </div>
