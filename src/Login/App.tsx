@@ -1,4 +1,3 @@
-import React from "react";
 import './App.css'
 import {
   BrowserRouter as Router,
@@ -13,6 +12,7 @@ import CommentPage from "../CommentPage";
 import CommentTable from "../FirstTable/CommentTable";
 import UserTable from "../SecondTable/UserTable";
 import AddressCard from "../AddressCard";
+import MapAddress from "../Map/MapAddress";
 
 
 
@@ -84,8 +84,4 @@ export default function BasicExample() {
     </Router>
   );
 }
-
-     function useStyles() {
-    throw new Error("Function not implemented.");
-  }
 

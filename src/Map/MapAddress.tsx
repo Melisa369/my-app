@@ -1,7 +1,4 @@
-import React from "react";
 import "ol/ol.css";
-import "./index.css";
-
 import TileLayer from "ol/layer/Tile";
 import VectorLayer from "ol/layer/Vector";
 import OSM from "ol/source/OSM";
@@ -37,7 +34,6 @@ const map = new Map({
     staticLayer
   ],
   view: view,
-  loadTilesWhileAnimating: true
 });
 
 const pointerMoveSnap = new Snap({
@@ -50,4 +46,12 @@ map.addInteraction(pointerMoveSnap);
 map.on("pointermove", e => {
   console.log(e.coordinate);
 });
+
+
+const MapAddress: React.FC = () => {
+  return <div  id="map"></div>
+};
+
+
+export default MapAddress;
 
