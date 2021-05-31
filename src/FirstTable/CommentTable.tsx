@@ -11,6 +11,7 @@ import { ExtendedTableColumnOptions } from "../types/table";
 import { Button, Container } from "@material-ui/core";
 
 
+
 interface Props {
   columns: ExtendedTableColumnOptions[];
   data: any[];
@@ -21,8 +22,7 @@ const Table: React.FC<Props> = ({ columns, data }) => {
     columns,
     data,
   });
- 
-  
+
 
   return (
     <Container  className="container">
@@ -50,6 +50,25 @@ const Table: React.FC<Props> = ({ columns, data }) => {
                   </TableCell>
                 );
               })}
+
+                    <Button
+                      type="submit"
+                      fullWidth
+                      color="secondary"
+                      size="medium"
+                    >
+                       DELETE
+                     </Button>
+
+                     <Button
+                      type="submit"
+                      fullWidth
+                      color="primary"
+                      size="medium"                      
+                    >
+                       EDIT
+                     </Button>
+
             </TableRow>
             
           );

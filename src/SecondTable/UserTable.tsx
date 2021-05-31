@@ -9,7 +9,7 @@ import './Table1.css'
 import { useTable } from "react-table";
 
 import { ExtendedTableColumnOptions } from "../types/table";
-import { Container } from "@material-ui/core";
+import { Button, Container } from "@material-ui/core";
 interface Props {
   columns: ExtendedTableColumnOptions[];
   data: any[];
@@ -47,6 +47,36 @@ const Table: React.FC<Props> = ({ columns, data }) => {
                   </TableCell>
                 );
               })}
+
+          <Button
+            type="submit"
+            fullWidth
+            color="primary"
+            size="medium"
+    
+          >
+           Activate
+          </Button>
+
+          <Button
+            type="submit"
+            fullWidth
+            color="secondary"
+            size="medium"   
+          >
+           Deactivate
+          </Button>
+        
+           <Button
+            href="/AddressCard"
+            type="submit"
+            fullWidth
+            color="default"
+            size="medium" 
+          >
+           Address
+          </Button>
+
             </TableRow>
           );
         })}

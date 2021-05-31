@@ -45,9 +45,7 @@ export default function BasicExample() {
             </li>
             <li>
               <Link to="/mapAddress">Map</Link>
-            </li>
-          
-           
+            </li> 
         </ul>
 
         <hr />

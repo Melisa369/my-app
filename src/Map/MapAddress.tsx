@@ -9,6 +9,8 @@ import { Feature } from "ol";
 import Point from "ol/geom/Point";
 import VectorSource from "ol/source/Vector";
 import Snap from "ol/interaction/Snap";
+import './map.css'
+
 
 const view = new View({
   center: fromLonLat([0, 0]),

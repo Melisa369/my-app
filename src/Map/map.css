@@ -6,8 +6,11 @@ body {
   }
   
   #map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    cursor: default;
+    height: 800px;
+    margin: 0 !important;
+    padding: 0 !important;
     width: 100%;
+    
   }
+
