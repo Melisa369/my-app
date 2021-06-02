@@ -17,6 +17,7 @@
     "formik": "^2.2.6",
     "namor": "^2.0.2",
     "ol": "^6.5.0",
+    "proj4": "^2.7.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-commentbox": "^3.0.1",
@@ -27,6 +28,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-table": "^7.6.3",
+    "react-use": "^17.2.4",
     "styled-components": "^5.2.3",
     "typescript": "^4.2.3",
     "web-vitals": "^1.1.0",
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "@types/ol": "^6.4.2",
+    "@types/proj4": "^2.5.0",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-table": "^7.0.29",
     "prettier": "2.2.1"
