@@ -51,24 +51,6 @@ const Table: React.FC<Props> = ({ columns, data }) => {
                 );
               })}
 
-                    <Button
-                      type="submit"
-                      fullWidth
-                      color="secondary"
-                      size="medium"
-                    >
-                       DELETE
-                     </Button>
-
-                     <Button
-                      type="submit"
-                      fullWidth
-                      color="primary"
-                      size="medium"                      
-                    >
-                       EDIT
-                     </Button>
-
             </TableRow>
             
           );
@@ -93,6 +75,31 @@ const columns: ExtendedTableColumnOptions[] = [
   {
     Header: "Comment",
     accessor: "comment",
+  },
+  {
+    Header: "Actions",
+    id: 'actions',
+    Cell: () => 
+      <div>
+      <Button
+      type="submit"
+      fullWidth
+      color="secondary"
+      size="medium"
+    >
+       DELETE
+     </Button>
+
+     <Button
+     type="submit"
+     fullWidth
+     color="primary"
+     size="medium"                      
+     >
+      EDIT
+    </Button>
+    </div>
+    
   },
 ];
 

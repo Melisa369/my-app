@@ -47,8 +47,32 @@ const Table: React.FC<Props> = ({ columns, data }) => {
                   </TableCell>
                 );
               })}
+            </TableRow>
+          );
+        })}
+      </TableBody>
+    </MaUTable>
+    </Container>
+  );
+};
 
-          <Button
+const columns: ExtendedTableColumnOptions[] = [
+  {
+    Header: "First Name",
+    accessor: "firstName",
+  },
+  { Header: "Last Name", 
+    accessor: "lastName" },
+  {
+    Header: "Email",
+    accessor: "email",
+  },
+  {
+    Header: "Actions",
+    id: 'actions',
+    Cell: () => 
+      <div>
+    <Button
             type="submit"
             fullWidth
             color="primary"
@@ -76,26 +100,7 @@ const Table: React.FC<Props> = ({ columns, data }) => {
           >
            Address
           </Button>
-
-            </TableRow>
-          );
-        })}
-      </TableBody>
-    </MaUTable>
-    </Container>
-  );
-};
-
-const columns: ExtendedTableColumnOptions[] = [
-  {
-    Header: "First Name",
-    accessor: "firstName",
-  },
-  { Header: "Last Name", 
-    accessor: "lastName" },
-  {
-    Header: "Email",
-    accessor: "email",
+    </div>
   },
 ];
 

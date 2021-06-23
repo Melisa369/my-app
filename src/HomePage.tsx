@@ -5,6 +5,7 @@ import './Style.css'
 import image from './img/BlogImg.jpg';
 
 
+
 export default function FixedContainer() {
   return (
     <React.Fragment>

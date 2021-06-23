@@ -16,6 +16,7 @@ import MapAddress from "../Map/MapAddress";
 
 
 
+
 export default function BasicExample() {
   return (
     <Router>
@@ -23,28 +24,28 @@ export default function BasicExample() {
       <div className="navbar">
         <ul>
           <li>
-            <Link to="/homePage">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/signIn">Sign In</Link>
+            <Link to="/sign-In">Sign In</Link>
           </li>
           <li>
-            <Link to="/signUp">Sign Up</Link>
+            <Link to="/sign-Up">Sign Up</Link>
           </li>
           <li>
-            <Link to="/addressCard">Address</Link>
+            <Link to="/address-Card">Address</Link>
           </li>
           <li>
-            <Link to="/commentPage">Comments</Link>
+            <Link to="/comment-Page">Comments</Link>
           </li>
           <li>
-              <Link to="/commentTable">Comment Table</Link>
+              <Link to="/comment-Table">Comment Table</Link>
             </li>
             <li>
-              <Link to="/userTable">User Table</Link>
+              <Link to="/user-Table">User Table</Link>
             </li>
             <li>
-              <Link to="/mapAddress">Map</Link>
+              <Link to="/map-Address">Map</Link>
             </li> 
         </ul>
 
@@ -52,28 +53,28 @@ export default function BasicExample() {
 
 
         <Switch>
-          <Route exact path="/homePage">
+          <Route exact path="/">
             <HomePage />
           </Route>
-          <Route path="/signIn">
+          <Route path="/sign-In">
             <SignIn />
           </Route>
-          <Route path="/signUp">
+          <Route path="/sign-Up">
             <SignUp />
           </Route>
-          <Route path="/addressCard">
+          <Route path="/address-Card">
             <AddressCard />
           </Route>
-          <Route path="/commentPage">
+          <Route path="/comment-Page">
             <CommentPage />
           </Route>
-          <Route path="/commentTable">
+          <Route path="/comment-Table">
             <CommentTable />
           </Route>
-          <Route path="/userTable">
+          <Route path="/user-Table">
             <UserTable />
           </Route>
-          <Route path="/mapAddress">
+          <Route path="/map-Address">
             <MapAddress />
           </Route>
         </Switch>
