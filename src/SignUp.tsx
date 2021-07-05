@@ -10,6 +10,7 @@ import AddIcon from '@material-ui/icons/Add';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { useTranslation } from "react-i18next";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp() {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <Container component="main" maxWidth="xs">
@@ -43,7 +45,7 @@ export default function SignUp() {
           <AddIcon/>
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          {t("Sign up")}
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -55,7 +57,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label={t("First Name")}
                 autoFocus
               />
             </Grid>
@@ -65,7 +67,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
+                label={t("Last Name")}
                 name="lastName"
                 autoComplete="lname"
               />
@@ -76,7 +78,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label={t("Email Address")}
                 name="email"
                 autoComplete="email"
               />
@@ -87,7 +89,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label={t("Password")}
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -101,12 +103,12 @@ export default function SignUp() {
             color="primary"
             className={classes.submit}
           >
-            Sign Up
+            {t("Sign Up")}
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
               <Link href="/signIn" variant="body2">
-                Already have an account? Sign in
+                {t("Already have an account? Sign in")}
               </Link>
             </Grid>
           </Grid>

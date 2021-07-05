@@ -8,6 +8,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { useTranslation } from "react-i18next";
 
 
 
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AddressCard() {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <Container component="main" maxWidth="xs">
@@ -42,7 +44,7 @@ export default function AddressCard() {
           <HomeIcon/>
         </Avatar>
         <Typography component="h1" variant="h5">
-          Address Card
+          {t("Address Card")}
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -51,7 +53,7 @@ export default function AddressCard() {
             required
             fullWidth
             id="country"
-            label="Country"
+            label={t("Country")}
             name="country"
             autoComplete="country"
             autoFocus
@@ -62,7 +64,7 @@ export default function AddressCard() {
             required
             fullWidth
             id="city"
-            label="City"
+            label={t("City")}
             name="city"
             autoComplete="city"
             autoFocus
@@ -73,7 +75,7 @@ export default function AddressCard() {
             required
             fullWidth
             id="street"
-            label="Street"
+            label={t("Street")}
             name="street"
             autoComplete="street"
             autoFocus
@@ -86,7 +88,7 @@ export default function AddressCard() {
             color="primary"
             className={classes.submit}
           >
-            Save
+            {t("Save")}
           </Button>
          
         </form>

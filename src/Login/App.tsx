@@ -1,4 +1,6 @@
 import './App.css'
+import { useTranslation } from "react-i18next";
+import LanguageSelect from "../languageSelect";
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,35 +19,41 @@ import MapAddress from "../Map/MapAddress";
 
 
 
+
 export default function BasicExample() {
+  const { t } = useTranslation();
   return (
     <Router>
+     
       <div className="wrapper">
       <div className="navbar">
+      <div className="language-select">
+        <LanguageSelect />
+      </div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">{t("home")}</Link>
           </li>
           <li>
-            <Link to="/sign-In">Sign In</Link>
+            <Link to="/sign-In">{t("sign_in")}</Link>
           </li>
           <li>
-            <Link to="/sign-Up">Sign Up</Link>
+            <Link to="/sign-Up">{t("sign_up")}</Link>
           </li>
           <li>
-            <Link to="/address-Card">Address</Link>
+            <Link to="/address-Card">{t("address")}</Link>
           </li>
           <li>
-            <Link to="/comment-Page">Comments</Link>
+            <Link to="/comment-Page">{t("comments")}</Link>
           </li>
           <li>
-              <Link to="/comment-Table">Comment Table</Link>
+              <Link to="/comment-Table">{t("comment_table")}</Link>
             </li>
             <li>
-              <Link to="/user-Table">User Table</Link>
+              <Link to="/user-Table">{t("user_table")}</Link>
             </li>
             <li>
-              <Link to="/map-Address">Map</Link>
+              <Link to="/map-Address">{t("map")}</Link>
             </li> 
         </ul>
 

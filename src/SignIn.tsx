@@ -12,6 +12,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { useTranslation } from "react-i18next";
+import LanguageSelect from "./languageSelect";
+import './Lan.css';
 
 
 
@@ -37,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
   const classes = useStyles();
-
+  const { t } = useTranslation();
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -46,7 +49,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          {t("Sign in")}
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -55,7 +58,7 @@ export default function SignIn() {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label={t("Email Address")}
             name="email"
             autoComplete="email"
             autoFocus
@@ -66,14 +69,14 @@ export default function SignIn() {
             required
             fullWidth
             name="password"
-            label="Password"
+            label={t("Password")}
             type="password"
             id="password"
             autoComplete="current-password"
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            label={t("Remember me")}
           />
           <Button
             type="submit"
@@ -82,12 +85,12 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            {t("Sign In")}
           </Button>
           <Grid container>
             <Grid item>
               <Link  href="/signUp"  variant="body2" >
-              "Don't have an account? Sign Up"
+              {t("Don't have an account? Sign Up")}
               </Link>
             </Grid>
           </Grid>

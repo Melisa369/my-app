@@ -9,7 +9,11 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListSubheader from "@material-ui/core/ListSubheader";
 
-const languageMap = {
+type Language = {
+  [key : string]: { label: string, dir: string, active: boolean},
+}
+
+const languageMap: Language = {
   en: { label: "English", dir: "ltr", active: true },
   bg: { label: "Bulgarian", dir: "rtl", active: false }
 };
@@ -18,7 +22,8 @@ const LanguageSelect = () => {
   const selected = localStorage.getItem("i18nextLng") || "en";
   const { t } = useTranslation();
 
-  const [menuAnchor, setMenuAnchor] = React.useState(null);
+  const [menuAnchor, setMenuAnchor] = React.useState<EventTarget & HTMLButtonElement | null>(null);
+  
   React.useEffect(() => {
     document.body.dir = languageMap[selected].dir;
   }, [menuAnchor, selected]);

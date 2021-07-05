@@ -5,10 +5,10 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import './Table1.css'
-
 import { useTable } from "react-table";
 import { ExtendedTableColumnOptions } from "../types/table";
 import { Button, Container } from "@material-ui/core";
+import { useTranslation } from "react-i18next";
 
 
 
@@ -61,51 +61,56 @@ const Table: React.FC<Props> = ({ columns, data }) => {
   );
 };
 
-const columns: ExtendedTableColumnOptions[] = [
-  {
-    Header: "First Name",
-    accessor: "firstName",
-  },
-  { Header: "Last Name",
-   accessor: "lastName" },
-  {
-    Header: "Email",
-    accessor: "email",
-  },
-  {
-    Header: "Comment",
-    accessor: "comment",
-  },
-  {
-    Header: "Actions",
-    id: 'actions',
-    Cell: () => 
-      <div>
-      <Button
-      type="submit"
-      fullWidth
-      color="secondary"
-      size="medium"
-    >
-       DELETE
-     </Button>
 
-     <Button
-     type="submit"
-     fullWidth
-     color="primary"
-     size="medium"                      
-     >
-      EDIT
-    </Button>
-    </div>
-    
-  },
-];
+
 
 function CommentTable() {
   const data: any[] = [];
 
+  const { t } = useTranslation();
+
+  const columns: ExtendedTableColumnOptions[] = [
+    {
+      Header: `${t('First Name')}`,
+      accessor: "firstName",
+    },
+    { Header: `${t('Last Name')}`,
+     accessor: "lastName" },
+    {
+      Header: `${t('Email')}`,
+      accessor: "email",
+    },
+    {
+      Header: `${t('Comment')}`,
+      accessor: "comment",
+    },
+    {
+      Header: `${t('Actions')}`,
+      id: 'actions',
+      Cell: () => 
+        <div>
+        <Button
+        type="submit"
+        fullWidth
+        color="secondary"
+        size="medium"
+      >
+          {t("DELETE")}
+       </Button>
+  
+       <Button
+       type="submit"
+       fullWidth
+       color="primary"
+       size="medium"                      
+       >
+        {t("EDIT")}
+      </Button>
+      </div>
+     
+    },
+  ];
+  
   return <Table columns={columns} data={data} />;
 }
 

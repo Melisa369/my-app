@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import './Style.css'
+import { useTranslation } from "react-i18next";
 
 
 
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <Container component="main" maxWidth="xs">
@@ -44,7 +46,7 @@ export default function SignIn() {
           <AccountCircleIcon/>
         </Avatar>
         <Typography component="h1" variant="h5">
-          User Name
+          {t("User Name")}
         </Typography>
         <form className={classes.form} noValidate>
         
@@ -52,7 +54,7 @@ export default function SignIn() {
             rowsMax={4}
             cols={58}
             aria-label="maximum height"
-            placeholder=" What are your thoughts?" 
+            placeholder={t(" What are your thoughts?" )}
           />
           
           <Button
@@ -62,7 +64,7 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Send
+            {t("Send")}
           </Button>
           <Grid container>
           </Grid>

@@ -3,7 +3,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 18px;    
+    font-size: 18px; 
+    padding-top: 46px;
 }
 
 .h1{

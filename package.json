@@ -13,7 +13,7 @@
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
     "bootstrap": "^5.0.2",
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.1",
     "clsx": "^1.1.1",
     "formik": "^2.2.6",
     "i18next": "^20.3.2",
@@ -29,6 +29,7 @@
     "react-commentbox": "^3.0.1",
     "react-data-table-component": "^6.11.7",
     "react-dom": "^17.0.1",
+    "react-font-size-changer": "^0.2.0",
     "react-i18next": "^11.11.0",
     "react-image": "^4.0.3",
     "react-popper": "^2.2.5",
@@ -36,10 +37,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-table": "^7.6.3",
-
-
     "react-tooltip-currenttarget": "^3.3.5",
-
     "react-use": "^17.2.4",
     "styled-components": "^5.2.3",
     "typescript": "^4.2.3",

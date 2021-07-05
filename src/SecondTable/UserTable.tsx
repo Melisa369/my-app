@@ -5,6 +5,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import './Table1.css'
+import { useTranslation } from "react-i18next";
 
 import { useTable } from "react-table";
 
@@ -56,56 +57,61 @@ const Table: React.FC<Props> = ({ columns, data }) => {
   );
 };
 
-const columns: ExtendedTableColumnOptions[] = [
-  {
-    Header: "First Name",
-    accessor: "firstName",
-  },
-  { Header: "Last Name", 
-    accessor: "lastName" },
-  {
-    Header: "Email",
-    accessor: "email",
-  },
-  {
-    Header: "Actions",
-    id: 'actions',
-    Cell: () => 
-      <div>
-    <Button
-            type="submit"
-            fullWidth
-            color="primary"
-            size="medium"
-    
-          >
-           Activate
-          </Button>
 
-          <Button
-            type="submit"
-            fullWidth
-            color="secondary"
-            size="medium"   
-          >
-           Deactivate
-          </Button>
-        
-           <Button
-            href="/AddressCard"
-            type="submit"
-            fullWidth
-            color="default"
-            size="medium" 
-          >
-           Address
-          </Button>
-    </div>
-  },
-];
 
 function UserTable() {
   const data: any[] = [];
+
+  const { t } = useTranslation();
+
+  const columns: ExtendedTableColumnOptions[] = [
+
+    {
+      Header: `${t('First Name')}`,
+      accessor: "firstName",
+    },
+    { Header: `${t('Last Name')}`, 
+      accessor: "lastName" },
+    {
+      Header: `${t('Email')}`,
+      accessor: "email",
+    },
+    {
+      Header: `${t('Actions')}`,
+      id: 'actions',
+      Cell: () => 
+        <div>
+      <Button
+              type="submit"
+              fullWidth
+              color="primary"
+              size="medium"
+      
+            >
+             Activate
+            </Button>
+  
+            <Button
+              type="submit"
+              fullWidth
+              color="secondary"
+              size="medium"   
+            >
+             Deactivate
+            </Button>
+          
+             <Button
+              href="/AddressCard"
+              type="submit"
+              fullWidth
+              color="default"
+              size="medium" 
+            >
+             Address
+            </Button>
+      </div>
+    },
+  ];
 
   return <Table columns={columns} data={data} />;
 }
