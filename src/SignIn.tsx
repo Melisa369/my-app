@@ -49,7 +49,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          {t("Sign in")}
+          {t("sign_in")}
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -58,7 +58,7 @@ export default function SignIn() {
             required
             fullWidth
             id="email"
-            label={t("Email Address")}
+            label={t("email_address")}
             name="email"
             autoComplete="email"
             autoFocus
@@ -69,14 +69,14 @@ export default function SignIn() {
             required
             fullWidth
             name="password"
-            label={t("Password")}
+            label={t("password")}
             type="password"
             id="password"
             autoComplete="current-password"
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label={t("Remember me")}
+            label={t("remember_me")}
           />
           <Button
             type="submit"
@@ -85,12 +85,12 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            {t("Sign In")}
+            {t("sign_in")}
           </Button>
           <Grid container>
             <Grid item>
               <Link  href="/signUp"  variant="body2" >
-              {t("Don't have an account? Sign Up")}
+              {t("don't_have_an_account?_sign_up")}
               </Link>
             </Grid>
           </Grid>

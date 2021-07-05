@@ -67,17 +67,17 @@ function UserTable() {
   const columns: ExtendedTableColumnOptions[] = [
 
     {
-      Header: `${t('First Name')}`,
+      Header: `${t('first_name')}`,
       accessor: "firstName",
     },
-    { Header: `${t('Last Name')}`, 
+    { Header: `${t('last_name')}`, 
       accessor: "lastName" },
     {
-      Header: `${t('Email')}`,
+      Header: `${t('email')}`,
       accessor: "email",
     },
     {
-      Header: `${t('Actions')}`,
+      Header: `${t('actions')}`,
       id: 'actions',
       Cell: () => 
         <div>
@@ -88,7 +88,7 @@ function UserTable() {
               size="medium"
       
             >
-             Activate
+             {t("activate")}
             </Button>
   
             <Button
@@ -97,7 +97,7 @@ function UserTable() {
               color="secondary"
               size="medium"   
             >
-             Deactivate
+             {t("deactivate")}
             </Button>
           
              <Button
@@ -107,7 +107,7 @@ function UserTable() {
               color="default"
               size="medium" 
             >
-             Address
+             {t("address")}
             </Button>
       </div>
     },

@@ -71,21 +71,21 @@ function CommentTable() {
 
   const columns: ExtendedTableColumnOptions[] = [
     {
-      Header: `${t('First Name')}`,
+      Header: `${t('first_name')}`,
       accessor: "firstName",
     },
-    { Header: `${t('Last Name')}`,
+    { Header: `${t('last_lame')}`,
      accessor: "lastName" },
     {
-      Header: `${t('Email')}`,
+      Header: `${t('email')}`,
       accessor: "email",
     },
     {
-      Header: `${t('Comment')}`,
+      Header: `${t('comment')}`,
       accessor: "comment",
     },
     {
-      Header: `${t('Actions')}`,
+      Header: `${t('actions')}`,
       id: 'actions',
       Cell: () => 
         <div>
@@ -95,7 +95,7 @@ function CommentTable() {
         color="secondary"
         size="medium"
       >
-          {t("DELETE")}
+          {t("delete")}
        </Button>
   
        <Button
@@ -104,7 +104,7 @@ function CommentTable() {
        color="primary"
        size="medium"                      
        >
-        {t("EDIT")}
+        {t("edit")}
       </Button>
       </div>
      

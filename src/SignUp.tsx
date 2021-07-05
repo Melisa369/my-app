@@ -45,7 +45,7 @@ export default function SignUp() {
           <AddIcon/>
         </Avatar>
         <Typography component="h1" variant="h5">
-          {t("Sign up")}
+          {t("sign_up")}
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -57,7 +57,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="firstName"
-                label={t("First Name")}
+                label={t("first_name")}
                 autoFocus
               />
             </Grid>
@@ -67,7 +67,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="lastName"
-                label={t("Last Name")}
+                label={t("last_name")}
                 name="lastName"
                 autoComplete="lname"
               />
@@ -78,7 +78,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="email"
-                label={t("Email Address")}
+                label={t("email_address")}
                 name="email"
                 autoComplete="email"
               />
@@ -89,7 +89,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 name="password"
-                label={t("Password")}
+                label={t("password")}
                 type="password"
                 id="password"
                 autoComplete="current-password"
@@ -103,12 +103,12 @@ export default function SignUp() {
             color="primary"
             className={classes.submit}
           >
-            {t("Sign Up")}
+            {t("sign_up")}
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
               <Link href="/signIn" variant="body2">
-                {t("Already have an account? Sign in")}
+                {t("already_have_an_account?_sign_in")}
               </Link>
             </Grid>
           </Grid>

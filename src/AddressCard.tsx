@@ -44,7 +44,7 @@ export default function AddressCard() {
           <HomeIcon/>
         </Avatar>
         <Typography component="h1" variant="h5">
-          {t("Address Card")}
+          {t("address_card")}
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -53,7 +53,7 @@ export default function AddressCard() {
             required
             fullWidth
             id="country"
-            label={t("Country")}
+            label={t("country")}
             name="country"
             autoComplete="country"
             autoFocus
@@ -64,7 +64,7 @@ export default function AddressCard() {
             required
             fullWidth
             id="city"
-            label={t("City")}
+            label={t("city")}
             name="city"
             autoComplete="city"
             autoFocus
@@ -75,7 +75,7 @@ export default function AddressCard() {
             required
             fullWidth
             id="street"
-            label={t("Street")}
+            label={t("street")}
             name="street"
             autoComplete="street"
             autoFocus
@@ -88,7 +88,7 @@ export default function AddressCard() {
             color="primary"
             className={classes.submit}
           >
-            {t("Save")}
+            {t("save")}
           </Button>
          
         </form>

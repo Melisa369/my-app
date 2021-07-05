@@ -46,7 +46,7 @@ export default function SignIn() {
           <AccountCircleIcon/>
         </Avatar>
         <Typography component="h1" variant="h5">
-          {t("User Name")}
+          {t("user_name")}
         </Typography>
         <form className={classes.form} noValidate>
         
@@ -54,7 +54,7 @@ export default function SignIn() {
             rowsMax={4}
             cols={58}
             aria-label="maximum height"
-            placeholder={t(" What are your thoughts?" )}
+            placeholder={t(" what_are_your_thoughts?" )}
           />
           
           <Button
@@ -64,7 +64,7 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            {t("Send")}
+            {t("send")}
           </Button>
           <Grid container>
           </Grid>
