@@ -6,7 +6,6 @@ import translationEN from "./shared/assets/en/translation.json";
 import translationBG from "./shared/assets/bg/translation.json";
 
 
-
 const fallbackLng = ["en"];
 const availableLanguages = ["en", "bg"];
 

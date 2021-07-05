@@ -1,31 +1,4 @@
 {
-    "select_language": "Избери Език",
-    "create_your_blog": "Създайте своя блог",
-    "bring_your_ideas_to_life_by_writing_and_managing_your_blog_whenever_inspiration_strikes,_on_your_desktop_or_on_the_go": "Вдъхнете живот на идеите си, като пишете и управлявате блога си винаги, когато вдъхновението настъпи, на работния плот или в движение",
-    "home": "Начало",
-    "sign_in": "Впиши се",
-    "sign_up": "Регистрирай се",
-    "address": "Адрес",
-    "comments": "Коментари",
-    "comment_table": "Таблица за коментари",
-    "user_table": "Потребителска таблица",
-    "map": "Карта",
-    "Email Address": "Електронна поща",
-    "Password": "Парола",
-    "Remember me": "Запомни ме",
-    "Don't have an account? Sign Up": "Нямате акаунт?Регистрирайте се",
-    "First Name": "Първо име",
-    "Last Name": "Фамилия",
-    "Email": "Електронна поща",
-    "Comment": "Коментар",
-    "Actions": "Действия",
-    "Already have an account? Sign in": "Вече имате акаунт?Впиши се",
-    "Address Card": "Адресна карта",
-    "Country": "Държава",
-    "City": "Град",
-    "Street": "Улица",
-    "Save": "Запази",
-    "User Name": "Потребителско име",
-    " What are your thoughts?": " Какво мислите?",
-    "Send": "Изпрати"
+    "select_language": "Избери Език"
   }
+  

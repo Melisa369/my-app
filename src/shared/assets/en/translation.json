@@ -1,32 +1,4 @@
 {
-    "select_language": "Select Language",
-    "create_your_blog": "Create your blog",
-    "bring_your_ideas_to_life_by_writing_and_managing_your_blog_whenever_inspiration_strikes,_on_your_desktop_or_on_the_go": "Bring your ideas to life by writing and managing your blog whenever inspiration strikes, on your desktop or on the go",
-    "home": "Home",
-    "sign_in": "Sign In",
-    "sign_up": "Sign Up",
-    "address": "Address",
-    "comments": "Comments",
-    "comment_table": "Comment Table",
-    "user_table": "User Table",
-    "map": "Map",
-    "Email Address": "Email Address",
-    "Password": "Password",
-    "Remember me": "Remember me",
-    "Don't have an account? Sign Up": "Don't have an account? Sign Up",
-    "First Name": "First Name",
-    "Last Name": "Last Name",
-    "Email": "Email",
-    "Comment": "Comment",
-    "Actions": "Actions",
-    "Already have an account? Sign in": "Already have an account? Sign in",
-    "Address Card": "Address Card",
-    "Country": "Country",
-    "City": "City",
-    "Street": "Street",
-    "Save": "Save",
-    "User Name": "User Name",
-    " What are your thoughts?": " What are your thoughts?",
-    "Send": "Send"
-
+    "select_language": "Select Language"
   }
+  
