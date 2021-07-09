@@ -1,6 +1,6 @@
 
   .language-select {
-    float:right;
+    justify-content: right;
     margin-top: 39px;
     padding-top: 10px;
   }

@@ -13,7 +13,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { useTranslation } from "react-i18next";
-import LanguageSelect from "./languageSelect";
 import './Lan.css';
 
 
