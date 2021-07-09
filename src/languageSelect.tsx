@@ -15,7 +15,7 @@ type Language = {
 
 const languageMap: Language = {
   en: { label: "English", dir: "ltr", active: true },
-  bg: { label: "Bulgarian", dir: "rtl", active: false }
+  bg: { label: "Bulgarian", dir: "ltl", active: false }
 };
 
 const LanguageSelect = () => {
