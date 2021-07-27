@@ -9,6 +9,15 @@ import {  baseLayerName, MAP_CENTER, MAP_DEFAULT_ZOOM } from "../shared/consts/m
 import { PROJECTION_7801, registerBGS2005Projection } from "./utils/registerProjection";
 import { useRef, useState } from "react";
 import { useMount } from "react-use";
+import VectorLayer from "ol/layer/Vector";
+import { GeoJSON } from 'ol/format';
+import VectorSource from "ol/source/Vector";
+import {Icon, Style} from 'ol/style';
+import Feature from 'ol/Feature';
+import Point from 'ol/geom/Point';
+import IconAnchorUnits from "ol/style/IconAnchorUnits";
+import pinMarker from 'src/img/pin_marker.png';
+
 
 
 registerBGS2005Projection();
@@ -23,6 +32,39 @@ const view = new View({
   minZoom: 6,
 });
 
+
+
+
+
+
+export const PinStyle = new Style({
+  image: new Icon({
+  anchor: [0.5, 1],
+  anchorXUnits: 'fraction' as IconAnchorUnits,
+  anchorYUnits: 'pixels' as IconAnchorUnits,
+  src: pinMarker,
+    }),
+  });
+  
+
+
+  const pinLayerSource = pinMarker.current.getSource();
+  const iconFeature = new Feature({
+    geometry: new Point([]),
+  });
+  
+  iconFeature.setStyle(PinStyle);
+  pinLayerSource.clear();
+  pinLayerSource.addFeature(iconFeature);
+
+
+var vectorSource = new VectorSource({
+  features: [iconFeature],
+});
+
+var vectorLayer = new VectorLayer({
+  source: vectorSource,
+});
 
 const MapAddress: React.FC = () => {
   const [map, setMap] = useState<Map | undefined>();
@@ -47,6 +89,11 @@ const MapAddress: React.FC = () => {
     view: view,
   })))
 
+  const pinMarkersLayerRef = useRef(
+    new VectorLayer({
+     source: new VectorSource({ format: new  GeoJSON(), wrapX: false }),
+   })
+ );
 
   return <div  id="map"/>
 };
